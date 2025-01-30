@@ -9,6 +9,7 @@
     <body>
 
     <h1>Calculadora na prática 2</h1>
+
     
     <form action="teste2.php" method="POST" onsubmit="return valForm()">
         <label for="num1">Numero 1:</label>
@@ -27,6 +28,7 @@
 
         <button type="submit">Calcular</button>
     </form>
+    
 
 <?php
 include "form.php"
