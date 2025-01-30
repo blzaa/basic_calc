@@ -3,26 +3,11 @@
     <head>
         <title>Calculadora 3</title>
         <meta charset="UTF-8">
-
-    <script>
-        function valForm(){
-            const num1 = document.getElementById('num1').value;
-            const num2 = document.getElementById('num2').value;
-            const operacao = document.getElementById('operacao').value;
-
-            if (num1 === '' || num2 === ''){
-                alert('Preencha todos os campos!');
-                return false;
-            }
-
-            if (operacao === 'divisao' && num1 == '0' || num2 == '0'){
-                alert('Qualquer número dividido por zero, será ZERO!');
-                return false;
-            }}
-    </script>
+        <script src="operation.js"></script>
     </head>
 
     <body>
+
     <h1>Calculadora na prática 2</h1>
     
     <form action="teste2.php" method="POST" onsubmit="return valForm()">
@@ -44,30 +29,7 @@
     </form>
 
 <?php
-
-    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-        $operacao = $_POST ['operacao'];
-
-        switch ($operacao){
-            case 'soma':
-                $resultado = $num1 + $num2;
-                break;
-            case 'subtracao':
-                $resultado = $num1 - $num2;
-                break;
-            case 'multiplicacao':
-                $resultado = $num1 * $num2;
-                break;
-            case 'divisao':
-                $resultado = $num1 / $num2;
-                break;
-        }
-
-        echo "<h2>O Resultado é: $resultado<h2>";
-    }
-
+include "form.php"
 ?>
     </body>
 </html>
