@@ -13,6 +13,7 @@
             <h1 class="text-center mb-4">Calculadora na prática 2</h1>
 
             <form action="teste2.php" method="POST" onsubmit="return valForm()" class="p-4 bg-white rounded shadow-sm">
+
                 <!-- Número 1 -->
                 <div class="mb-3">
                     <label for="num1" class="form-label">Número 1:</label>
